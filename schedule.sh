@@ -26,10 +26,8 @@ echo "####################### Start of script python ##########################"
 # - path: put path to dawnload the movies
 # - number: number of last movies to search during the parsing
 
-# python3 /opt/data/scrpits/parse_tamilyogi.py -path '/opt/plex_movie/movies' -number 5
-python /opt/data/scrpits/parse_tamilyogi.py \
+python3 /opt/data/scrpits/parse_tamilyogi.py \
     -path '/opt/videos' \
     -tmp_path '/opt/log' \
     -number 5
-# python C:\Users\dell\OneDrive\Documents\Perso\linux\scrapy\New\parse_tamilyogi.py -path 'C:\Users\Public\Videos' -tmp_path 'C:\Users\Public\Videos' -number 5
 echo "######################## End of Script Python ###########################"
