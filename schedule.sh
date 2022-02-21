@@ -12,9 +12,9 @@
 ## to add in crontab ##
 ## run each 4 hours
 ## put out in a log file (/opt/data/log/parse_tamilyogi.log)
-# crontab -e
-# 0 */4 * * * bash /opt/data/scrpits/schedule.sh >> /opt/data/log/parse_tamilyogi.log
-# /etc/init.d/cron reload
+ crontab -e
+ 0 */4 * * * bash /app/.heroku/python/lib/python3.7/data/scrpits/schedule.sh >> /app/.heroku/python/lib/python3.7/data/log/parse_tamilyogi.log
+ /etc/init.d/cron reload
 
 dt=$(date '+%d/%m/%Y - %H:%M:%S');
 echo ""
@@ -26,7 +26,7 @@ echo "####################### Start of script python ##########################"
 # - number: number of last movies to search during the parsing
 
 python3 /opt/data/scrpits/parse_tamilyogi.py \
-    -path '/opt/videos' \
-    -tmp_path '/opt/log' \
-    -number 5
+    -path '/app/.heroku/python/lib/python3.7/videos' \
+    -tmp_path '/app/.heroku/python/lib/python3.7/log' \
+    -number 1000
 echo "######################## End of Script Python ###########################"
